@@ -1,15 +1,15 @@
-f082716c3e6d17370b9da03f326a06a5 *DESCRIPTION
-59b8fd2734c6c1f02313f6b81bac5ae5 *NAMESPACE
+056a7a19e1b9506186c36a06304be407 *DESCRIPTION
+5590d1e4151b290ebe0c8780575864dc *NAMESPACE
 08948bee430150703f7e4a62b0f24e41 *R/GenerateData.R
 a680eed357ebe0236df268e1ae4836e8 *R/KendallCCA.R
 d176ecb53077d38ac239df38a4ac1e06 *R/KendallTau.R
 a959bbac21d28c9a7ff36811152cd732 *R/RcppExports.R
 ec763f87b00c52eb0756c086c722fc8d *R/auxiliaryFunctions.R
 2977034ede4a7ffdaaed943cac4ecbb9 *R/bridge.R
-4aa6a4cb6e3db5ae8c84e158078a1eee *R/bridgeInv.R
+d301326af541d70f7c46beb1effc25d9 *R/bridgeInv.R
 a0d7ddc159413c3b1674d7811fd81a5b *R/estimateR.R
 497aabe53ec704e90cd88b6553a73bc8 *R/fromKtoR.R
-ff849e5af4daeddf572aa6ade3554fc0 *R/fromKtoR_ipol.R
+501ac1d580d769db51803e9a6d239bad *R/fromKtoR_ipol.R
 3c713a2a0f40b720bcb1aaaade2fb24e *R/sysdata.rda
 91942edca942bf84ba23db40db5db518 *README.md
 4bf74594832020b1cd4bbb3432861011 *man/CorrStructure.Rd
@@ -26,5 +26,5 @@ f1972690bc550936cead13ef7fd6613e *man/find_w12bic.Rd
 15630174a1aecb0628273c940bb22af6 *man/standardCCA.Rd
 61059660eb073d93e00e8ee054237071 *src/Makevars
 61059660eb073d93e00e8ee054237071 *src/Makevars.win
-5e409fb9e2a920898441d1c6c2184ecb *src/RcppExports.cpp
-3c6867ed3cb2d8a933098db5b3d778e7 *src/find_w1w2.cpp
+8245e11f6e0fab172ff6339de6311bcf *src/RcppExports.cpp
+ff3241e68386c6bee4e14c74bad62937 *src/find_w1w2.cpp
