@@ -8,7 +8,7 @@
 estimateR(
   X,
   type = "trunc",
-  method = "approx",
+  method = "original",
   use.nearPD = TRUE,
   nu = 0.01,
   tol = 0.001,
@@ -20,7 +20,7 @@ estimateR_mixed(
   X2,
   type1 = "trunc",
   type2 = "continuous",
-  method = "approx",
+  method = "original",
   use.nearPD = TRUE,
   nu = 0.01,
   tol = 0.001,
@@ -32,7 +32,7 @@ estimateR_mixed(
 
 \item{type}{A type of variables in \code{X}, must be one of "continuous", "binary" or "trunc".}
 
-\item{method}{The calculation method of latent correlation. Either "original" method or "approx". If \code{method = "approx"}, multilinear approximation method is used, which is much faster than the original method. If \code{method = "original"}, optimization of the bridge inverse function is used. The default is "approx".}
+\item{method}{The calculation method of latent correlation. Either "original" method or "approx". If \code{method = "approx"}, multilinear approximation method is used, which is much faster than the original method (requires \code{chebpol} R package). If \code{method = "original"}, optimization of the bridge inverse function is used. The default is "original".}
 
 \item{use.nearPD}{A logical value indicating whether to use \link[Matrix]{nearPD} or not when the resulting correlation estimator is not positive definite (have at least one negative eigenvalue).}
 
@@ -68,7 +68,7 @@ estimateR_mixed(
 }
 }
 \description{
-Estimation of latent correlation matrix from observed data of (possibly) mixed types (continuous/biary/truncated continuous) based on the latent Gaussian copula model.
+Estimation of latent correlation matrix from observed data of (possibly) mixed types (continuous/binary/truncated continuous) based on the latent Gaussian copula model.
 }
 \examples{
 ### Data setting
@@ -106,8 +106,8 @@ range(colMeans(X2 == 0))
 # with original method
 R1_org <- estimateR(X1, type = "trunc", method = "original")$R
 # with faster approximation method
-R1_approx <- estimateR(X1, type = "trunc", method = "approx")$R
-R12_approx <- estimateR_mixed(X1, X2, type1 = "trunc", type2 = "continuous", method = "approx")$R12
+#R1_approx <- estimateR(X1, type = "trunc", method = "approx")$R
+#R12_approx <- estimateR_mixed(X1, X2, type1 = "trunc", type2 = "continuous", method = "approx")$R12
 
 
 }
@@ -116,5 +116,5 @@ Fan J., Liu H., Ning Y. and Zou H. (2017) "High dimensional semiparametric laten
 
 Yoon G., Carroll R.J. and Gaynanova I. (2020) "Sparse semiparametric canonical correlation analysis for data of mixed types" <doi:10.1093/biomet/asaa007>.
 
-Yoon G., Müller C.L., Gaynanova I. (2020) "Fast computation of latent correlations" <arXiv:2006.13875>.
+Yoon G., Mueller C.L., Gaynanova I. (2020) "Fast computation of latent correlations" <arXiv:2006.13875>.
 }

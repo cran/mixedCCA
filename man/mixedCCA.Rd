@@ -68,7 +68,7 @@ mixedCCA(
 }
 }
 \description{
-Applies sparse canonical correlation analysis (CCA) for high-dimensional data of mixed types (continuous/biary/truncated continuous). Derived rank-based estimator instead of sample correlation matrix is implemented. There are two types of BIC criteria for variable selection. We found that BIC1 works best for variable selection, whereas BIC2 works best for prediction.
+Applies sparse canonical correlation analysis (CCA) for high-dimensional data of mixed types (continuous/binary/truncated continuous). Derived rank-based estimator instead of sample correlation matrix is implemented. There are two types of BIC criteria for variable selection. We found that BIC1 works best for variable selection, whereas BIC2 works best for prediction.
 }
 \examples{
 ### Simple example
@@ -105,11 +105,12 @@ range(colMeans(X1 == 0))
 range(colMeans(X2 == 0))
 
 # Kendall CCA with BIC1
-kendallcca1 <- mixedCCA(X1, X2, type1 = "trunc", type2 = "trunc", BICtype = 1)
+kendallcca1 <- mixedCCA(X1, X2, type1 = "trunc", type2 = "trunc", BICtype = 1, nlamseq = 10)
 
 # Kendall CCA with BIC2. Estimated correlation matrix is plugged in from the above result.
 R <- kendallcca1$KendallR
-kendallcca2 <- mixedCCA(X1, X2, type1 = "trunc", type2 = "trunc", KendallR = R, BICtype = 2)
+kendallcca2 <- mixedCCA(X1, X2, type1 = "trunc", type2 = "trunc",
+                        KendallR = R, BICtype = 2, nlamseq = 10)
 }
 \references{
 Yoon G., Carroll R.J. and Gaynanova I. (2020) "Sparse semiparametric canonical correlation analysis for data of mixed types" <doi:10.1093/biomet/asaa007>.

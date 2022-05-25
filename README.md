@@ -1,7 +1,10 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
-mixedCCA: sparse CCA for data of mixed types
-============================================
+[![R-CMD-check](https://github.com/irinagain/mixedCCA/workflows/R-CMD-check/badge.svg)](https://github.com/irinagain/mixedCCA/actions)
+<!-- badges: end -->
+
+# mixedCCA: sparse CCA for data of mixed types
 
 The R package `mixedCCA` implements sparse canonical correlation
 analysis for data of mixed types: continuous, binary or zero-inflated
@@ -16,17 +19,19 @@ available and implemented to the R package `mixedCCA`. The corresponding
 reference is available on arXiv:
 
 [Yoon G., Müller C.L. and Gaynanova I., “Fast computation of latent
-correlations” *arXiv*](https://arxiv.org/abs/2006.13875).
+correlations” *JCGS*](https://doi.org/10.1080/10618600.2021.1882468).
 
-Installation
-------------
+**Attention:** Due to deprecation of R package `chebpol`
+(<https://cran.r-project.org/package=chebpol>), the fast version is
+temporarily unavailable. We are working on a fix.
+
+## Installation
 
 ``` install
 devtools::install_github("irinagain/mixedCCA")
 ```
 
-Example
--------
+## Example
 
 ``` r
 library(mixedCCA)
